@@ -1,32 +1,10 @@
-<!-- This page is modified from https://github.com/iissnan/iissnan.github.com -->
+【新版本预告】<br/>
+hd[
+去繁为简
+]
+<br/>-(+2019-11-27+)<br/>
+「ZIDC新项目」<br/>
 
-<!doctype html>
-<html lang="en" class="no-js dark">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LF</title>
-  <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-  <!-- <link rel="stylesheet" type="text/css" href="assets/css/main.css"/> -->
-  <link rel="stylesheet" type="text/css" href="assets/css/minified.css"/>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-</head>
-
-<body>
-  <div class="vi">
-    <h1 class="animate-slide-in-down">ZIDC工作室</h1>
-    <div class="quote">
-      <span class="quote-line quote-line-start animate-slide-in-left"></span>
-<p class="quote-content animate-slide-in-down">ZIDC；既然来了，那就看看吧 |･ω･｀)</p>
-<p class="quote-author animate-slide-in-down">ZIDC-永不放弃！</p><br/><br/><br/>
-<!-- 公告开始 -->
-
-
-<!-- 其余公告 -->
-
-<p class="quote-author animate-slide-in-down">
 
 
 【ZIDC财务报告 收入 (2019) 置顶】<br/>
@@ -142,7 +120,6 @@ ZIDC保证永久免费<br/>
 
 
 <!-- 归档公告 -->
-<p class="quote-author animate-slide-in-down">
 【2018年12月19号至2019年10月2日历史公告归档】<br/>
 [
 <br/><br/>
@@ -219,110 +196,4 @@ ZIDC官网:http://mzidc.two3.cn<br/><br/><br/>ZIDC-维护团队】<br/>ZIDC官�
 
 <!-- 公告结束 -->
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-      <span class="quote-line quote-line-end animate-slide-in-right"></span>
-    </div>
-    <div class="links">
-      <a href="./" class="animate-slide-in-down" target="_blank" >GitHub</a>
-	  <a href="./" class="animate-slide-in-down" target="_blank" >Twitter</a>
-      <a href="./" class="animate-slide-in-down" target="_blank" >Personal Blog</a>
-      <a href="./" class="animate-slide-in-down" target="_blank" >Telegram Contact</a>
-      <a href="./" class="animate-slide-in-down" target="_blank" >Personal Site</a>
-    </div>
-      <script type="application/javascript">
-        function getgeoip(json){
-          // document.getElementById("welcome").innerHTML = "Hope you are doing well in " + json.city + " :)";
-          document.getElementById("ipdisplay").innerHTML = json.ip + ", " + json.organization; // InnerHTML here for IP & ISP display
-        }
-      </script>
-      <div><br>
-          <!-- <span class="location-text animate-slide-in-down" id="welcome"></span><br> -->
-          <span class="location-text animate-slide-in-down">Copyright ©<a href="./" target="_blank">  </a>2016-2019 <a href="./" target="_blank">ZIDC.</a>, <a href="./" target="_blank">(XZ.小赵) 版权所有</a></span>
-
- <span class="location-text animate-slide-in-down"><center><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1274093352'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1274093352%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></center></span>
-
-    </div>
-  </div>
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>  <script>
-    $(function () {
-      var SLIDE_IN_DOWN = { opacity: 1, top: 0 };
-      var SLIDE_IN_UP = { opacity: 1, bottom: 0 };
-      var SLIDE_IN_LEFT = { left: 0 };
-      var SLIDE_IN_RIGHT = { right: 0 };
-
-      registerCheatCode();
-      executeAnimations();
-
-      function executeAnimations() {
-        $.when()
-          .then(animateTitle)
-          .then(animateQuote)
-          .then(animateLinks)
-          .then(animateLocation);
-      }
-
-      function animateTitle() {
-        return animate('h1', SLIDE_IN_DOWN);
-      }
-
-      function animateQuote() {
-        return $.when(
-          animate('.quote-line-start', SLIDE_IN_LEFT),
-          animate('.quote-line-end',SLIDE_IN_RIGHT),
-          animate('.quote-icon-start', SLIDE_IN_DOWN),
-          animate('.quote-icon-end', SLIDE_IN_UP)
-        )
-          .then(function () {
-            return animate('.quote-content', SLIDE_IN_DOWN);
-          })
-          .then(function () {
-            return animate('.quote-author', SLIDE_IN_DOWN);
-          });
-      }
-
-      function animateLinks() {
-        var DELAY_STEP = 200;
-        var elements = $('.links a');
-        var concurrent = $.makeArray(elements)
-          .map(function (element, index) {
-            return animate(element, SLIDE_IN_DOWN, index * DELAY_STEP);
-          });
-
-        return $.when.apply($, concurrent);
-      }
-
-      function animateLocation() {
-        return $.when(
-          animate('.location-icon', SLIDE_IN_UP),
-          animate('.location-text', SLIDE_IN_DOWN)
-        );
-      }
-
-      function animate(selector, properties, delay, options) {
-        delay = delay || 0;
-        return $(selector).delay(delay)
-          .animate(properties, options)
-          .promise();
-      }
-
-      function registerCheatCode() {
-        $(document.body).on('keydown', function (event) {
-          var KEY_B = 66;
-
-          // if (event.which === KEY_B) {
-          //   $('.relocate-location').text('Bookmark Page');
-          //   $('.relocating').css('opacity', 1);
-
-          //   window.setTimeout(function () {
-          //     window.location.href = '/bookmarks.html';
-          //   }, 1000);
-          // }
-        });
-      }
-    });
-  </script>
-  <script type="application/javascript" src="https://api.ip.sb/geoip?callback=getgeoip"></script><!-- Geo IP API Imported From Here -->
-</body>
-</html>
+      
